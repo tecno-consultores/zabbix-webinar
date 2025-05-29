@@ -1,0 +1,53 @@
+commit 1220eb40ca72044d2eea08ad9cb97ba20935c7fa (HEAD -> main, origin/main, origin/HEAD)
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Thu May 29 19:09:42 2025 -0400
+
+    * readme
+
+commit 5e6c7d1c6dc9fb9fd76da5cf0c32379a7d4a2db7
+Author: Jesús Palencia <sinfallas@yahoo.com>
+Date:   Tue May 27 14:36:19 2025 -0400
+
+    Update README.md
+
+commit 9b2b9912fc9ea38c9b26dc9fa04155280650a931 (tag: v1.0)
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Tue May 27 13:56:11 2025 -0400
+
+    * variables
+
+commit 79bed6f788730816c0a28e0fbbeac353b0bdc5f8
+Author: Jesús Palencia <sinfallas@yahoo.com>
+Date:   Tue May 27 13:51:01 2025 -0400
+
+    Create docker-compose.yaml
+
+commit 76e33230942d90781fbc922e6b40fe35c40f3d05
+Author: Jesús Palencia <sinfallas@yahoo.com>
+Date:   Fri May 23 09:50:07 2025 -0400
+
+    Update .gitignore
+
+commit acbafa0ae395cadd556a1e27dacc3b4c65e35e24
+Author: Jesús Palencia <sinfallas@yahoo.com>
+Date:   Fri May 23 09:46:42 2025 -0400
+
+    Create COPYING
+
+commit aa2aab74ccc3717610d4da098d49c2719428c568
+Author: Jesús Palencia <sinfallas@yahoo.com>
+Date:   Fri May 23 09:45:53 2025 -0400
+
+    Create AUTHORS
+
+commit 55ee3597e22a3d565e682bad46bed47ed0f21366
+Author: Jesús Palencia <sinfallas@yahoo.com>
+Date:   Fri May 23 09:45:16 2025 -0400
+
+    Create .gitignore
+
+commit 52d2e1863c7832194569ed149be4d42d0aab052d
+Author: Jesús Palencia <sinfallas@yahoo.com>
+Date:   Fri May 23 09:41:00 2025 -0400
+
+    Initial commit
