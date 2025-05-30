@@ -9,6 +9,10 @@ if [[ "$EUID" != "0" ]]; then
 	exit 1
 fi
 
+# install requeriments
+apt update
+apt -y install gnupg2
+
 # Install Docker on Ubuntu
 echo "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7EA0A9C3F273FCD8
