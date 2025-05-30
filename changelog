@@ -1,4 +1,16 @@
-commit 5bc2f83d7f6a990afe6daa2ee16998e916bf455b (HEAD -> main, origin/main, origin/HEAD)
+commit 5584836650d4c6085bac9d62f53327070f04212d (HEAD -> main, origin/main, origin/HEAD)
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Fri May 30 10:55:54 2025 -0400
+
+    * limite de memoria para elastic
+
+commit 234a12345c811bc2ba6371558912b0a98aace3c1
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Fri May 30 10:43:09 2025 -0400
+
+    * changelog
+
+commit 5bc2f83d7f6a990afe6daa2ee16998e916bf455b
 Author: Jesus Palencia <sinfallas@gmail.com>
 Date:   Fri May 30 10:43:03 2025 -0400
 
