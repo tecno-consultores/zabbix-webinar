@@ -528,6 +528,8 @@ services:
     environment:
       - transport.host=0.0.0.0
       - discovery.zen.minimum_master_nodes=1
+      - MALLOC_ARENA_MAX=4
+      - refresh_rate=300s
     networks:
       database:
         aliases:
