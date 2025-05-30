@@ -521,19 +521,19 @@ services:
     volumes:
       - ./zbx_env/var/lib/postgresql/data:/var/lib/postgresql/data:rw
 
-  elasticsearch:
-    image: elasticsearch:9.0.1
-    restart: unless-stopped
-    attach: false
-    environment:
-      - transport.host=0.0.0.0
-      - discovery.zen.minimum_master_nodes=1
-      - MALLOC_ARENA_MAX=4
-      - refresh_rate=300s
-    networks:
-      database:
-        aliases:
-          - elasticsearch
+#  elasticsearch:
+#    image: elasticsearch:9.0.1
+#    restart: unless-stopped
+#    attach: false
+#    environment:
+#      - transport.host=0.0.0.0
+#      - discovery.zen.minimum_master_nodes=1
+#      - MALLOC_ARENA_MAX=4
+#      - refresh_rate=300s
+#    networks:
+#      database:
+#        aliases:
+#          - elasticsearch
 
 networks:
   frontend:
