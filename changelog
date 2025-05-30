@@ -1,4 +1,16 @@
-commit 5584836650d4c6085bac9d62f53327070f04212d (HEAD -> main, origin/main, origin/HEAD)
+commit cd2dc64c5dd002875ad5147c64ee5a8d42b8df97 (HEAD -> main, origin/main, origin/HEAD)
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Fri May 30 10:59:57 2025 -0400
+
+    * se desactiva elastic search
+
+commit a2131c74c88232fd04b61f599308775be610a25a
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Fri May 30 10:56:06 2025 -0400
+
+    * changelog
+
+commit 5584836650d4c6085bac9d62f53327070f04212d
 Author: Jesus Palencia <sinfallas@gmail.com>
 Date:   Fri May 30 10:55:54 2025 -0400
 
