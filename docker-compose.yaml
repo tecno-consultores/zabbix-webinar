@@ -1,6 +1,8 @@
 services:
   server-db-init:
     image: zabbix/zabbix-server-pgsql:ubuntu-7.2-latest
+    hostname: zabbix-server-pgsql-init
+    container_name: zabbix-server-pgsql-init
     depends_on:
       postgres-server:
         condition: service_started
@@ -16,10 +18,6 @@ services:
     secrets:
       - POSTGRES_USER
       - POSTGRES_PASSWORD
-    networks:
-      database:
-        aliases:
-          - zabbix-server-pgsql-init
     environment:
       - POSTGRES_USER_FILE=/run/secrets/POSTGRES_USER
       - POSTGRES_PASSWORD_FILE=/run/secrets/POSTGRES_PASSWORD
@@ -35,6 +33,8 @@ services:
 
   zabbix-server:
     image: zabbix/zabbix-server-pgsql:ubuntu-7.2-latest
+    hostname: zabbix-server
+    container_name: zabbix-server
     depends_on:
       server-db-init:
         condition: service_completed_successfully
@@ -159,21 +159,10 @@ services:
     secrets:
       - POSTGRES_USER
       - POSTGRES_PASSWORD
-    networks:
-      backend:
-        aliases:
-          - zabbix-server-pgsql
-           - zabbix-server
-      database:
-        aliases:
-          - zabbix-server
     init: true
     ports:
-      - name: zabbix-trapper
-        target: 10051
-        published: 10051
-        protocol: tcp
-        app_protocol: zabbix-trapper
+      - "161:161"
+#      - "10050:10050"
     restart: unless-stopped
     attach: true
     volumes:
@@ -190,8 +179,6 @@ services:
       - ./zbx_env/var/lib/zabbix/ssl/ssl_ca:/var/lib/zabbix/ssl/ssl_ca:rw
       - ./snmptraps:/var/lib/zabbix/snmptraps:roz
     tmpfs: /tmp
-#    ulimits:
-#      nproc: 65535
     deploy:
       resources:
         limits:
@@ -214,6 +201,8 @@ services:
 
   zabbix-web-nginx-pgsql:
     image: zabbix/zabbix-web-nginx-pgsql:ubuntu-7.2-latest
+    hostname: zabbix-web-nginx-pgsql
+    container_name: zabbix-web-nginx-pgsql
     depends_on:
       server-db-init:
         condition: service_completed_successfully
@@ -277,23 +266,9 @@ services:
     secrets:
       - POSTGRES_USER
       - POSTGRES_PASSWORD
-    networks:
-      backend:
-        aliases:
-          - zabbix-web-nginx-pgsql
-      database:
-      frontend:
     ports:
-      - name: web-http
-        target: 8080
-        published: 80
-        protocol: tcp
-        app_protocol: http
-      - name: web-https
-        target: 8443
-        published: 443
-        protocol: tcp
-        app_protocol: https
+      - "80:8080"
+      - "43:8443"
     restart: unless-stopped
     attach: false
     volumes:
@@ -324,13 +299,11 @@ services:
 
   zabbix-agent:
     image: zabbix/zabbix-agent:ubuntu-7.2-latest
+    hostname: zabbix-agent
+    container_name: zabbix-agent
     init: true
     ports:
-      - name: zabbix-agent
-        target: 10050
-        published: 10050
-        protocol: tcp
-        app_protocol: zabbix-agent
+      - "10050:10050"
     restart: unless-stopped
     attach: false
     volumes:
@@ -399,21 +372,14 @@ services:
 #    - ZBX_ALLOWKEY=
     privileged: true
     pid: "host"
-    networks:
-      backend:
-        aliases:
-          - zabbix-agent
-          - zabbix-agent-passive
     stop_grace_period: 5s
 
   zabbix-snmptraps:
     image: zabbix/zabbix-snmptraps:ubuntu-7.2-latest
+    hostname: zabbix-snmptraps
+    container_name: zabbix-snmptraps
     ports:
-      - name: snmptrap
-        target: 1162
-        published: 162
-        protocol: udp
-        app_protocol: snmptrap
+      - "162:1162"
     restart: unless-stopped
     attach: false
     read_only: true
@@ -433,20 +399,14 @@ services:
       - ZBX_SNMP_TRAP_DATE_FORMAT=+%Y-%m-%dT%T%z
       - ZBX_SNMP_TRAP_FORMAT=\n
       - ZBX_SNMP_TRAP_USE_DNS=false
-    networks:
-      frontend:
-        aliases:
-          - zabbix-snmptraps
-      backend:
     stop_grace_period: 5s
 
   zabbix-web-service:
     image: zabbix/zabbix-web-service:ubuntu-7.2-latest
+    hostname: zabbix-web-service
+    container_name: zabbix-web-service
     ports:
-      - name: zabbix-web-service
-        target: 10053
-        published: 10053
-        protocol: tcp
+      - "10053:10053"
     restart: unless-stopped
     attach: false
     read_only: true
@@ -477,15 +437,13 @@ services:
 #      - ZBX_TLSKEYFILE=
 #      - ZBX_TLSKEY=
 #      - ZBX_IGNOREURLCERTERRORS=0
-    networks:
-      backend:
-        aliases:
-          - zabbix-web-service
     stop_grace_period: 5s
 
   postgres-server:
     image: postgres:16-alpine
 #    command: -c ssl=on -c ssl_cert_file=/run/secrets/server-cert.pem -c ssl_key_file=/run/secrets/server-key.pem -c ssl_ca_file=/run/secrets/root-ca.pem
+    hostname: postgres-server
+    container_name: postgres-server
     restart: unless-stopped
     attach: false
     volumes:
@@ -510,10 +468,6 @@ services:
       - POSTGRES_USER
       - POSTGRES_PASSWORD
     stop_grace_period: 1m
-    networks:
-      database:
-        aliases:
-          - postgres-server
 
   db-data-pgsql:
     image: busybox:latest
@@ -534,36 +488,6 @@ services:
 #      database:
 #        aliases:
 #          - elasticsearch
-
-networks:
-  frontend:
-    driver: bridge
-    enable_ipv6: false
-    ipam:
-      driver: default
-      config:
-      - subnet: 172.16.238.0/24
-  backend:
-    driver: bridge
-    enable_ipv6: false
-    internal: true
-    ipam:
-      driver: default
-      config:
-      - subnet: 172.16.239.0/24
-  database:
-    driver: bridge
-    enable_ipv6: false
-    internal: true
-    ipam:
-      driver: default
-  tools_frontend:
-    driver: bridge
-    enable_ipv6: false
-    ipam:
-      driver: default
-      config:
-      - subnet: 172.16.240.0/24
 
 secrets:
   POSTGRES_USER:
