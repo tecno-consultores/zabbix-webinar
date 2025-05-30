@@ -1,4 +1,16 @@
-commit 1220eb40ca72044d2eea08ad9cb97ba20935c7fa (HEAD -> main, origin/main, origin/HEAD)
+commit 1b02a498e4557351b91b1b141156662559c472a3 (HEAD -> main, origin/main, origin/HEAD)
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Fri May 30 10:06:33 2025 -0400
+
+    * se agrega script de instalacion
+
+commit 809ed8d22acaf0e6a78cb20d44d1e608d317fa6b
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Thu May 29 19:09:49 2025 -0400
+
+    * changelog
+
+commit 1220eb40ca72044d2eea08ad9cb97ba20935c7fa
 Author: Jesus Palencia <sinfallas@gmail.com>
 Date:   Thu May 29 19:09:42 2025 -0400
 
