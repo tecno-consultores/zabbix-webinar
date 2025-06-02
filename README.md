@@ -9,3 +9,6 @@ Default user: Admin
 
 
 Default password: zabbix
+
+
+Probado en AMD64 y ARM64

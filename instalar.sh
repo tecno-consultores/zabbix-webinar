@@ -27,5 +27,5 @@ done
 
 # install zabbix
 docker compose -f docker-compose.yaml up -d
-
+echo ""
 echo "Zabbix instalado correctamente."
