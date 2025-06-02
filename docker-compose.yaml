@@ -323,7 +323,13 @@ services:
           cpus: '0.1'
           memory: 64M
       mode: global
-#      environment:
+    environment:
+      - ZBX_HOSTNAME=agente
+      - ZBX_SERVER_HOST=zabbix-server
+      - ZBX_PASSIVE_ALLOW=true
+      - ZBX_PASSIVESERVERS=zabbix-server
+      - ZBX_ACTIVE_ALLOW=true
+#      - ZBX_ACTIVESERVERS=zabbix-server
 #    - ZBX_SOURCEIP=
 #    - ZBX_DEBUGLEVEL=3
 #    - ZBX_ENABLEREMOTECOMMANDS=0 # Deprecated since 5.0.0
@@ -332,16 +338,10 @@ services:
 #    - ZBX_HEARTBEAT_FREQUENCY=60 # Available since 6.2
 #    - ZBX_HOSTINTERFACE= # Available since 4.4.0
 #    - ZBX_HOSTINTERFACEITEM= # Available since 4.4.0
-#    - ZBX_SERVER_HOST=zabbix-server
-#    - ZBX_PASSIVE_ALLOW=true
-#    - ZBX_PASSIVESERVERS=
-#    - ZBX_ACTIVE_ALLOW=true
-#    - ZBX_ACTIVESERVERS=
 #    - ZBX_LISTENIP=
 #    - ZBX_LISTENPORT=10050
 #    - ZBX_LISTENBACKLOG=
 #    - ZBX_STARTAGENTS=10
-#    - ZBX_HOSTNAME=
 #    - ZBX_HOSTNAMEITEM=system.hostname
 #    - ZBX_METADATA=
 #    - ZBX_METADATAITEM=
@@ -373,6 +373,8 @@ services:
     privileged: true
     pid: "host"
     stop_grace_period: 5s
+    links:
+      - zabbix-server
 
   zabbix-snmptraps:
     image: zabbix/zabbix-snmptraps:ubuntu-7.2-latest
