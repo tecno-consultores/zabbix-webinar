@@ -1,4 +1,16 @@
-commit fccde413d9dcadb3a3cfec6563bab1e34f2adcd0 (HEAD -> main, origin/main, origin/HEAD)
+commit bedd7e029996e6d08fa38fc92b7a99830db79688 (HEAD -> main, origin/main, origin/HEAD)
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Mon Jun 2 19:58:27 2025 +0000
+
+    * agente
+
+commit 1c4ca187352e886dcc84091aa8203b5216f18870
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Mon Jun 2 14:27:46 2025 -0400
+
+    * changelog
+
+commit fccde413d9dcadb3a3cfec6563bab1e34f2adcd0
 Author: Jesus Palencia <sinfallas@gmail.com>
 Date:   Mon Jun 2 14:27:35 2025 -0400
 
@@ -16,7 +28,7 @@ Date:   Fri May 30 17:03:58 2025 -0400
 
     * publicacion de puertos
 
-commit e17e612509117b3c7093cbc150799fe804e4e67d
+commit e17e612509117b3c7093cbc150799fe804e4e67d (tag: v1.1)
 Author: Jesus Palencia <sinfallas@gmail.com>
 Date:   Fri May 30 11:00:08 2025 -0400
 
