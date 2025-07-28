@@ -1,6 +1,6 @@
 services:
   server-db-init:
-    image: zabbix/zabbix-server-pgsql:ubuntu-7.2-latest
+    image: zabbix/zabbix-server-pgsql:ubuntu-7.4-latest
     hostname: zabbix-server-pgsql-init
     container_name: zabbix-server-pgsql-init
     depends_on:
@@ -32,7 +32,7 @@ services:
 #      - POSTGRES_USE_IMPLICIT_SEARCH_PATH=false
 
   zabbix-server:
-    image: zabbix/zabbix-server-pgsql:ubuntu-7.2-latest
+    image: zabbix/zabbix-server-pgsql:ubuntu-7.4-latest
     hostname: zabbix-server
     container_name: zabbix-server
     depends_on:
@@ -74,8 +74,8 @@ services:
 #      - ZBX_AUTOHANODENAME=fqdn # Allowed values: fqdn, hostname. Available since 6.0.0
 #      - ZBX_HANODENAME= # Available since 6.0.0
 #      - ZBX_AUTONODEADDRESS=fqdn # Allowed values: fqdn, hostname. Available since 6.0.0
-#      - ZBX_NODEADDRESSPORT=10051 # Allowed to use with ZBX_AUTONODEADDRESS variable only. Available since 6.0.0
-#      - ZBX_NODEADDRESS=localhost:10051 # Available since 6.0.0
+      - ZBX_NODEADDRESSPORT=10051 # Allowed to use with ZBX_AUTONODEADDRESS variable only. Available since 6.0.0
+      - ZBX_NODEADDRESS=zabbix-server:10051 # Available since 6.0.0
 #      - ZBX_DEBUGLEVEL=3
 #      - ZBX_ENABLEGLOBALSCRIPTS=0 # Available since 7.0.0
 #      - ZBX_STARTAGENTPOLLERS=1 # Available since 7.0.0
@@ -200,7 +200,7 @@ services:
 #      - net.ipv4.ping_group_range=0 1995
 
   zabbix-web-nginx-pgsql:
-    image: zabbix/zabbix-web-nginx-pgsql:ubuntu-7.2-latest
+    image: zabbix/zabbix-web-nginx-pgsql:ubuntu-7.4-latest
     hostname: zabbix-web-nginx-pgsql
     container_name: zabbix-web-nginx-pgsql
     depends_on:
@@ -298,7 +298,7 @@ services:
       - net.core.somaxconn=65535
 
   zabbix-agent:
-    image: zabbix/zabbix-agent:ubuntu-7.2-latest
+    image: zabbix/zabbix-agent:ubuntu-7.4-latest
     hostname: zabbix-agent
     container_name: zabbix-agent
     init: true
@@ -377,7 +377,7 @@ services:
       - zabbix-server
 
   zabbix-snmptraps:
-    image: zabbix/zabbix-snmptraps:ubuntu-7.2-latest
+    image: zabbix/zabbix-snmptraps:ubuntu-7.4-latest
     hostname: zabbix-snmptraps
     container_name: zabbix-snmptraps
     ports:
@@ -404,7 +404,7 @@ services:
     stop_grace_period: 5s
 
   zabbix-web-service:
-    image: zabbix/zabbix-web-service:ubuntu-7.2-latest
+    image: zabbix/zabbix-web-service:ubuntu-7.4-latest
     hostname: zabbix-web-service
     container_name: zabbix-web-service
     ports:
