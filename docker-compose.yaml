@@ -38,11 +38,6 @@ services:
     depends_on:
       server-db-init:
         condition: service_completed_successfully
-#   volumes:
-#     - ./env_vars/.ZBX_DB_CA_FILE:/run/secrets/root-ca.pem:ro
-#     - ./env_vars/.ZBX_DB_CERT_FILE:/run/secrets/client-cert.pem:ro
-#     - ./env_vars/.ZBX_DB_KEY_FILE:/run/secrets/client-key.pem:ro
-#     - pgsql_socket:/var/run/postgresql
     environment:
       - POSTGRES_USER_FILE=/run/secrets/POSTGRES_USER
       - POSTGRES_PASSWORD_FILE=/run/secrets/POSTGRES_PASSWORD
@@ -206,11 +201,6 @@ services:
     depends_on:
       server-db-init:
         condition: service_completed_successfully
-#   volumes:
-#      - ./env_vars/.ZBX_DB_CA_FILE:/run/secrets/root-ca.pem:ro
-#      - ./env_vars/.ZBX_DB_CERT_FILE:/run/secrets/client-cert.pem:ro
-#      - ./env_vars/.ZBX_DB_KEY_FILE:/run/secrets/client-key.pem:ro
-#      - pgsql_socket:/var/run/postgresql
     environment:
       - POSTGRES_USER_FILE=/run/secrets/POSTGRES_USER
       - POSTGRES_PASSWORD_FILE=/run/secrets/POSTGRES_PASSWORD
