@@ -15,8 +15,8 @@ services:
     command: init_db_only
     tmpfs: /tmp
     environment:
-      - MYSQL_USER=zabbix
-      - MYSQL_PASSWORD=zabbix
+      - MYSQL_USER_FILE=/run/secrets/MYSQL_USER
+      - MYSQL_PASSWORD_FILE=/run/secrets/MYSQL_PASSWORD
       - MYSQL_DATABASE=zabbix_proxy
 #      - DB_SERVER_HOST=mysql-server
 #      - DB_SERVER_PORT=3306
@@ -100,8 +100,8 @@ services:
           cpus: '0.3'
           memory: 256M
     environment:
-      - MYSQL_USER=zabbix
-      - MYSQL_PASSWORD=zabbix
+      - MYSQL_USER_FILE=/run/secrets/MYSQL_USER
+      - MYSQL_PASSWORD_FILE=/run/secrets/MYSQL_PASSWORD
       - MYSQL_DATABASE=zabbix_proxy
 #      - DB_SERVER_HOST=mysql-server
 #      - DB_SERVER_PORT=3306
