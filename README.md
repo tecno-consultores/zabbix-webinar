@@ -5,10 +5,10 @@ Archivos de Docker para la instalacion de Zabbix
 docker compose -f docker-compose.yaml up -d
 ```
 
-** Default user: Admin **
+**Default user: Admin**
 
 
-Default password: zabbix
+**Default password: zabbix**
 
 
 Probado en AMD64 y ARM64
