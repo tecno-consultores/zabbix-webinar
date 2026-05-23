@@ -6,7 +6,6 @@ services:
     depends_on:
       postgres-server:
         condition: service_started
-    init: true
     attach: true
     volumes:
       - ./zbx_env/var/lib/zabbix/dbscripts:/var/lib/zabbix/dbscripts:ro
@@ -56,40 +55,40 @@ services:
 #      - ZBX_LISTENIP=
 #      - ZBX_LISTENPORT=10051
 #      - ZBX_LISTENBACKLOG=
-#      - ZBX_HISTORYSTORAGEURL=http://elasticsearch:9200/ # Available since 3.4.5
-#      - ZBX_HISTORYSTORAGETYPES=uint,dbl,str,log,text # Available since 3.4.5
-#      - ZBX_ALLOWUNSUPPORTEDDBVERSIONS=0 # Available since 6.0.0
-#      - ZBX_MAXCONCURRENTCHECKSPERPOLLER=1000 # Available since 7.0.0
-#      - ZBX_DBTLSCONNECT=required # Available since 5.0.0
-#      - ZBX_DBTLSCAFILE=/run/secrets/root-ca.pem # Available since 5.0.0
-#      - ZBX_DBTLSCERTFILE=/run/secrets/client-cert.pem # Available since 5.0.0
-#      - ZBX_DBTLSKEYFILE=/run/secrets/client-key.pem # Available since 5.0.0
-#      - ZBX_DBTLSCIPHER= # Available since 5.0.0
-#      - ZBX_DBTLSCIPHER13= # Available since 5.0.0
-#      - ZBX_AUTOHANODENAME=fqdn # Allowed values: fqdn, hostname. Available since 6.0.0
-#      - ZBX_HANODENAME= # Available since 6.0.0
-#      - ZBX_AUTONODEADDRESS=fqdn # Allowed values: fqdn, hostname. Available since 6.0.0
-      - ZBX_NODEADDRESSPORT=10051 # Allowed to use with ZBX_AUTONODEADDRESS variable only. Available since 6.0.0
-      - ZBX_NODEADDRESS=zabbix-server:10051 # Available since 6.0.0
+#      - ZBX_HISTORYSTORAGEURL=http://elasticsearch:9200/
+#      - ZBX_HISTORYSTORAGETYPES=uint,dbl,str,log,text
+#      - ZBX_ALLOWUNSUPPORTEDDBVERSIONS=0
+#      - ZBX_MAXCONCURRENTCHECKSPERPOLLER=1000
+#      - ZBX_DBTLSCONNECT=required
+#      - ZBX_DBTLSCAFILE=/run/secrets/root-ca.pem
+#      - ZBX_DBTLSCERTFILE=/run/secrets/client-cert.pem
+#      - ZBX_DBTLSKEYFILE=/run/secrets/client-key.pem
+#      - ZBX_DBTLSCIPHER= 
+#      - ZBX_DBTLSCIPHER13=
+#      - ZBX_AUTOHANODENAME=fqdn
+#      - ZBX_HANODENAME=
+#      - ZBX_AUTONODEADDRESS=fqdn 
+      - ZBX_NODEADDRESSPORT=10051 
+      - ZBX_NODEADDRESS=zabbix-server:10051
 #      - ZBX_DEBUGLEVEL=3
-#      - ZBX_ENABLEGLOBALSCRIPTS=0 # Available since 7.0.0
-#      - ZBX_STARTAGENTPOLLERS=1 # Available since 7.0.0
+#      - ZBX_ENABLEGLOBALSCRIPTS=0
+#      - ZBX_STARTAGENTPOLLERS=1
 #      - ZBX_STARTPOLLERS=5
 #      - ZBX_STARTIPMIPOLLERS=0
-#      - ZBX_STARTPREPROCESSORS=3 # Available since 3.4.0
-#      - ZBX_STARTCONNECTORS=0 # Available since 6.4.0
+#      - ZBX_STARTPREPROCESSORS=3
+#      - ZBX_STARTCONNECTORS=0
 #      - ZBX_STARTPOLLERSUNREACHABLE=1
 #      - ZBX_STARTTRAPPERS=5
 #      - ZBX_STARTPINGERS=1
 #      - ZBX_STARTDISCOVERERS=5
-#      - ZBX_STARTODBCPOLLERS=1 # Available since 6.0.0
-#      - ZBX_STARTHTTPAGENTPOLLERS=1 # Available since 7.0.0
+#      - ZBX_STARTODBCPOLLERS=1
+#      - ZBX_STARTHTTPAGENTPOLLERS=1
 #      - ZBX_STARTHTTPPOLLERS=1
-#      - ZBX_STARTSNMPPOLLERS=1 # Available since 7.0.0
-#      - ZBX_STARTHISTORYPOLLERS=5 # Available since 5.4.0
+#      - ZBX_STARTSNMPPOLLERS=1
+#      - ZBX_STARTHISTORYPOLLERS=5
 #      - ZBX_STARTTIMERS=1
 #      - ZBX_STARTESCALATORS=1
-#      - ZBX_STARTALERTERS=3 # Available since 3.4.0
+#      - ZBX_STARTALERTERS=3
 #      - ZBX_STARTLLDPROCESSORS=2
 #      - ZBX_JAVAGATEWAYPORT=10052
 #      - ZBX_STARTVMWARECOLLECTORS=0
@@ -130,19 +129,19 @@ services:
 #      - ZBX_TLSCERT=
 #      - ZBX_TLSKEYFILE=
 #      - ZBX_TLSKEY=
-#      - ZBX_VAULT=HashiCorp # Available since 6.2.0
+#      - ZBX_VAULT=HashiCorp
 #      - ZBX_VAULTDBPATH=
-#      - ZBX_VAULTTLSCERTFILE= # Available since 6.2.0
-#      - ZBX_VAULTTLSKEYFILE= # Available since 6.2.0
+#      - ZBX_VAULTTLSCERTFILE=
+#      - ZBX_VAULTTLSKEYFILE= 
 #      - ZBX_VAULTURL=https://127.0.0.1:8200
-#      - ZBX_VAULTPREFIX= # Available since 7.0.0
+#      - ZBX_VAULTPREFIX=
 #      - VAULT_TOKEN=
 #      - ZBX_STARTREPORTWRITERS=0
 #      - ZBX_WEBSERVICEURL=http://zabbix-web-service:10053/report
 #      - ZBX_SERVICEMANAGERSYNCFREQUENCY=60
-#      - ZBX_ALLOWSOFTWAREUPDATECHECK=1 # Available since 7.0.0
-#      - ZBX_WEBDRIVERURL=http://selenium:4444 # Available since 7.0.0
-#      - ZBX_STARTBROWSERPOLLERS=1 # Available since 7.0.0
+#      - ZBX_ALLOWSOFTWAREUPDATECHECK=1
+#      - ZBX_WEBDRIVERURL=http://selenium:4444
+#      - ZBX_STARTBROWSERPOLLERS=1
 #      - DB_SERVER_HOST=postgres-server
 #      - DB_SERVER_PORT=5432
 #      - POSTGRES_USER=zabbix
@@ -154,10 +153,9 @@ services:
     secrets:
       - POSTGRES_USER
       - POSTGRES_PASSWORD
-    init: true
     ports:
       - "161:161"
-#      - "10050:10050"
+      - "10051:10051" # se utiliza este puerto para no abrir puerto en el firewall del lado del cliente y traslada el uso de cpu (del agente) al lado del servidor
     restart: unless-stopped
     attach: true
     volumes:
@@ -172,7 +170,7 @@ services:
       - ./zbx_env/var/lib/zabbix/ssl/certs:/var/lib/zabbix/ssl/certs:ro
       - ./zbx_env/var/lib/zabbix/ssl/keys:/var/lib/zabbix/ssl/keys:ro
       - ./zbx_env/var/lib/zabbix/ssl/ssl_ca:/var/lib/zabbix/ssl/ssl_ca:rw
-      - ./snmptraps:/var/lib/zabbix/snmptraps:roz
+      - ./snmptraps:/var/lib/zabbix/snmptraps:ro
     tmpfs: /tmp
     deploy:
       resources:
@@ -183,16 +181,14 @@ services:
           cpus: '0.5'
           memory: 512M
     stop_grace_period: 30s
-#  devices:
-#   - "/dev/ttyUSB0:/dev/ttyUSB0"
-#  cap_add:
-#    - "NET_RAW"
+    cap_add:
+      - "NET_RAW"
     sysctls:
       - net.ipv4.ip_local_port_range=1024 64999
       - net.ipv4.conf.all.accept_redirects=0
       - net.ipv4.conf.all.secure_redirects=0
       - net.ipv4.conf.all.send_redirects=0
-#      - net.ipv4.ping_group_range=0 1995
+      - net.ipv4.ping_group_range=0 1995
     logging:
       options:
         max-size: "10m"
@@ -220,23 +216,23 @@ services:
 #      - ENABLE_TIMESCALEDB=true
 #      - POSTGRES_USE_IMPLICIT_SEARCH_PATH=false
 #      - ZBX_SERVER_PORT=10051
-#      - ZBX_DB_ENCRYPTION=true # Available since 5.0.0
-#      - ZBX_DB_KEY_FILE=/run/secrets/client-key.pem # Available since 5.0.0
-#      - ZBX_DB_CERT_FILE=/run/secrets/client-cert.pem # Available since 5.0.0
-#      - ZBX_DB_CA_FILE=/run/secrets/root-ca.pem # Available since 5.0.0
-#      - ZBX_DB_VERIFY_HOST=false # Available since 5.0.0
-#      - ZBX_DB_CIPHER_LIST= # Available since 5.0.0
-#      - ZBX_VAULT= # Available since 6.2.0
+#      - ZBX_DB_ENCRYPTION=true
+#      - ZBX_DB_KEY_FILE=/run/secrets/client-key.pem
+#      - ZBX_DB_CERT_FILE=/run/secrets/client-cert.pem
+#      - ZBX_DB_CA_FILE=/run/secrets/root-ca.pem
+#      - ZBX_DB_VERIFY_HOST=false
+#      - ZBX_DB_CIPHER_LIST=
+#      - ZBX_VAULT=
 #      - ZBX_VAULTDBPATH=
 #      - ZBX_VAULTURL=https://127.0.0.1:8200
 #      - VAULT_TOKEN=
-#      - ZBX_VAULTCERTFILE= # Available since 6.2.0
-#      - ZBX_VAULTKEYFILE= # Available since 6.2.0
-#      - ZBX_VAULTCACHE=false # Available since 6.2.0
-#      - ZBX_HISTORYSTORAGEURL=http://elasticsearch:9200/ # Available since 3.4.5
-#      - ZBX_HISTORYSTORAGETYPES=['uint', 'dbl', 'str', 'text', 'log'] # Available since 3.4.5
-#      - ZBX_SSO_SETTINGS={} # Available since 5.0.0. Then will be converted from JSON to PHP array.
-#      - ZBX_ALLOW_HTTP_AUTH=true # Available since 7.0.0
+#      - ZBX_VAULTCERTFILE= 
+#      - ZBX_VAULTKEYFILE= 
+#      - ZBX_VAULTCACHE=false 
+#      - ZBX_HISTORYSTORAGEURL=http://elasticsearch:9200/ 
+#      - ZBX_HISTORYSTORAGETYPES=['uint', 'dbl', 'str', 'text', 'log'] 
+#      - ZBX_SSO_SETTINGS={} 
+#      - ZBX_ALLOW_HTTP_AUTH=true
 #      - ENABLE_WEB_ACCESS_LOG=true
 #      - ZBX_MAXEXECUTIONTIME=600
 #      - ZBX_MEMORYLIMIT=128M
@@ -295,7 +291,6 @@ services:
     image: zabbix/zabbix-agent:ubuntu-7.4-latest
     hostname: zabbix-agent
     container_name: zabbix-agent
-    init: true
     ports:
       - "10050:10050"
     restart: unless-stopped
@@ -328,10 +323,10 @@ services:
 #    - ZBX_DEBUGLEVEL=3
 #    - ZBX_ENABLEREMOTECOMMANDS=0 # Deprecated since 5.0.0
 #    - ZBX_LOGREMOTECOMMANDS=0
-#    - ZBX_FORCEACTIVECHECKSONSTART=0 # Available since 6.0.2
-#    - ZBX_HEARTBEAT_FREQUENCY=60 # Available since 6.2
-#    - ZBX_HOSTINTERFACE= # Available since 4.4.0
-#    - ZBX_HOSTINTERFACEITEM= # Available since 4.4.0
+#    - ZBX_FORCEACTIVECHECKSONSTART=0
+#    - ZBX_HEARTBEAT_FREQUENCY=60
+#    - ZBX_HOSTINTERFACE=
+#    - ZBX_HOSTINTERFACEITEM=
 #    - ZBX_LISTENIP=
 #    - ZBX_LISTENPORT=10050
 #    - ZBX_LISTENBACKLOG=
@@ -380,7 +375,7 @@ services:
     attach: false
     read_only: true
     volumes:
-      - ./snmptraps:/var/lib/zabbix/snmptraps:rwz
+      - ./snmptraps:/var/lib/zabbix/snmptraps:rw
       - ./zbx_env/var/lib/zabbix/snmptrapd_config:/var/lib/zabbix/snmptrapd_config:rw
     tmpfs: /tmp
     deploy:
@@ -409,8 +404,6 @@ services:
     volumes:
       - ./zbx_env/var/lib/zabbix/enc:/var/lib/zabbix/enc:ro
     tmpfs: /tmp
-    security_opt:
-      - seccomp:./env_vars/chrome_dp.json
     deploy:
       resources:
         limits:
@@ -490,3 +483,4 @@ secrets:
     file: ./env_vars/.POSTGRES_USER
   POSTGRES_PASSWORD:
     file: ./env_vars/.POSTGRES_PASSWORD
+
