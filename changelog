@@ -1,173 +1,245 @@
-commit 8809182159e03b25582d799955c88f609e318ad3 (HEAD -> main, origin/main, origin/HEAD)
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Mon Jul 28 18:29:31 2025 -0400
-
-    * 7.4
-
-commit eb617155ebf526dba59d8dd97c1d557682ae3066
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Tue Jun 3 16:40:25 2025 -0400
-
-    * changelog
-
-commit 2eacbffab8032004c23853e47d8007094e1ac9bc
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Tue Jun 3 16:40:12 2025 -0400
-
-    * presentacion
-
-commit 8f71a2fa6ed5dead6d4a2d0ff36cd9c4703f3526
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Mon Jun 2 16:00:23 2025 -0400
-
-    * changelog
-
-commit bedd7e029996e6d08fa38fc92b7a99830db79688
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Mon Jun 2 19:58:27 2025 +0000
-
-    * agente
-
-commit 1c4ca187352e886dcc84091aa8203b5216f18870
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Mon Jun 2 14:27:46 2025 -0400
-
-    * changelog
-
-commit fccde413d9dcadb3a3cfec6563bab1e34f2adcd0
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Mon Jun 2 14:27:35 2025 -0400
-
-    * readme
-
-commit 2445cfb509cbf00382f81240e98d5fdc2908a38e
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Fri May 30 17:04:11 2025 -0400
-
-    * changelog
-
-commit 189ca5ad65179ab64af5ba175dd58c29271658f3
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Fri May 30 17:03:58 2025 -0400
-
-    * publicacion de puertos
-
-commit e17e612509117b3c7093cbc150799fe804e4e67d (tag: v1.1)
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Fri May 30 11:00:08 2025 -0400
-
-    * changelog
-
-commit cd2dc64c5dd002875ad5147c64ee5a8d42b8df97
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Fri May 30 10:59:57 2025 -0400
-
-    * se desactiva elastic search
-
-commit a2131c74c88232fd04b61f599308775be610a25a
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Fri May 30 10:56:06 2025 -0400
-
-    * changelog
-
-commit 5584836650d4c6085bac9d62f53327070f04212d
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Fri May 30 10:55:54 2025 -0400
-
-    * limite de memoria para elastic
-
-commit 234a12345c811bc2ba6371558912b0a98aace3c1
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Fri May 30 10:43:09 2025 -0400
-
-    * changelog
-
-commit 5bc2f83d7f6a990afe6daa2ee16998e916bf455b
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Fri May 30 10:43:03 2025 -0400
-
-    * bugfix
-
-commit 186ef8efc5abb6e3893deb8591452f8c34530edc
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Fri May 30 10:28:32 2025 -0400
-
-    * changelog
-
-commit 4787eb3b2cdd9ddcabf38a4911f9507457677ebd
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Fri May 30 10:28:23 2025 -0400
-
-    * dependencias
-
-commit 943f8a32b74fddbda0ba4fbf007811fdb37e2712
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Fri May 30 10:06:42 2025 -0400
-
-    * changelog
-
-commit 1b02a498e4557351b91b1b141156662559c472a3
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Fri May 30 10:06:33 2025 -0400
-
-    * se agrega script de instalacion
-
-commit 809ed8d22acaf0e6a78cb20d44d1e608d317fa6b
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Thu May 29 19:09:49 2025 -0400
-
-    * changelog
-
-commit 1220eb40ca72044d2eea08ad9cb97ba20935c7fa
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Thu May 29 19:09:42 2025 -0400
-
-    * readme
-
-commit 5e6c7d1c6dc9fb9fd76da5cf0c32379a7d4a2db7
-Author: Jesús Palencia <sinfallas@yahoo.com>
-Date:   Tue May 27 14:36:19 2025 -0400
-
-    Update README.md
-
-commit 9b2b9912fc9ea38c9b26dc9fa04155280650a931 (tag: v1.0)
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Tue May 27 13:56:11 2025 -0400
-
-    * variables
-
-commit 79bed6f788730816c0a28e0fbbeac353b0bdc5f8
-Author: Jesús Palencia <sinfallas@yahoo.com>
-Date:   Tue May 27 13:51:01 2025 -0400
-
-    Create docker-compose.yaml
-
-commit 76e33230942d90781fbc922e6b40fe35c40f3d05
-Author: Jesús Palencia <sinfallas@yahoo.com>
-Date:   Fri May 23 09:50:07 2025 -0400
-
-    Update .gitignore
-
-commit acbafa0ae395cadd556a1e27dacc3b4c65e35e24
-Author: Jesús Palencia <sinfallas@yahoo.com>
-Date:   Fri May 23 09:46:42 2025 -0400
-
-    Create COPYING
-
-commit aa2aab74ccc3717610d4da098d49c2719428c568
-Author: Jesús Palencia <sinfallas@yahoo.com>
-Date:   Fri May 23 09:45:53 2025 -0400
-
-    Create AUTHORS
-
-commit 55ee3597e22a3d565e682bad46bed47ed0f21366
-Author: Jesús Palencia <sinfallas@yahoo.com>
-Date:   Fri May 23 09:45:16 2025 -0400
-
-    Create .gitignore
-
-commit 52d2e1863c7832194569ed149be4d42d0aab052d
-Author: Jesús Palencia <sinfallas@yahoo.com>
-Date:   Fri May 23 09:41:00 2025 -0400
-
-    Initial commit
+* commit e6a9805cffe25382c983f554658fcc91fc5cf99e (HEAD -> main, origin/main, origin/HEAD)
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sat May 23 11:25:54 2026 -0400
+| 
+|     * bugfix
+| 
+* commit 30eca0d83665db2f4f496c28aec8a1799d27b90d
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Mon Oct 27 09:27:28 2025 -0400
+| 
+|     Update README.md
+| 
+* commit dc81213a3a55eda9f1e8246c39ee31752483b651
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Mon Oct 27 09:26:41 2025 -0400
+| 
+|     Update README.md
+| 
+* commit 096aa4ba8bf017c3009a2803afad4267456a7061 (tag: v1.1.1)
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Tue Oct 7 09:20:01 2025 -0400
+| 
+|     Update proxy-docker-compose.yml
+| 
+* commit 7e0e997fe2800981193e8f5fa88d23d53d5d2120
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Tue Sep 2 09:32:32 2025 -0400
+| 
+|     Update docker-compose.yaml
+| 
+* commit bbc8263745a70aa7ab7466808ceb234c0c72bddb
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Wed Jul 30 14:24:47 2025 -0400
+| 
+|     Add files via upload
+| 
+* commit 3cf57f1ec9184ba5dfb522dfab9ba9c4a571a4de
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Wed Jul 30 13:58:48 2025 -0400
+| 
+|     Add files via upload
+| 
+* commit 83c35f4410737c83e98cbbef5a17116d9a164272
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Wed Jul 30 13:51:56 2025 -0400
+| 
+|     Update docker-compose.yaml
+| 
+* commit 467db6cda212b7ebdccc6a3050d0bac5dc7d2039
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Wed Jul 30 11:21:19 2025 -0400
+| 
+|     Add files via upload
+| 
+* commit 3fb33e0ac73f294458c39325b065718ea684b72d
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Wed Jul 30 10:45:08 2025 -0400
+| 
+|     Add files via upload
+| 
+* commit b9cfc1bea5ab261c7e9ada2918a1260fa798eb42
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Wed Jul 30 10:17:17 2025 -0400
+| 
+|     Add files via upload
+| 
+* commit 74f0400afb3efbc0348bb6791fd3919c411ac6e4
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Mon Jul 28 18:29:43 2025 -0400
+| 
+|     * changelog
+| 
+* commit 8809182159e03b25582d799955c88f609e318ad3
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Mon Jul 28 18:29:31 2025 -0400
+| 
+|     * 7.4
+| 
+* commit eb617155ebf526dba59d8dd97c1d557682ae3066
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Tue Jun 3 16:40:25 2025 -0400
+| 
+|     * changelog
+| 
+* commit 2eacbffab8032004c23853e47d8007094e1ac9bc
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Tue Jun 3 16:40:12 2025 -0400
+| 
+|     * presentacion
+| 
+* commit 8f71a2fa6ed5dead6d4a2d0ff36cd9c4703f3526
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Mon Jun 2 16:00:23 2025 -0400
+| 
+|     * changelog
+| 
+* commit bedd7e029996e6d08fa38fc92b7a99830db79688
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Mon Jun 2 19:58:27 2025 +0000
+| 
+|     * agente
+| 
+* commit 1c4ca187352e886dcc84091aa8203b5216f18870
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Mon Jun 2 14:27:46 2025 -0400
+| 
+|     * changelog
+| 
+* commit fccde413d9dcadb3a3cfec6563bab1e34f2adcd0
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Mon Jun 2 14:27:35 2025 -0400
+| 
+|     * readme
+| 
+* commit 2445cfb509cbf00382f81240e98d5fdc2908a38e
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 30 17:04:11 2025 -0400
+| 
+|     * changelog
+| 
+* commit 189ca5ad65179ab64af5ba175dd58c29271658f3
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 30 17:03:58 2025 -0400
+| 
+|     * publicacion de puertos
+| 
+* commit e17e612509117b3c7093cbc150799fe804e4e67d (tag: v1.1)
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 30 11:00:08 2025 -0400
+| 
+|     * changelog
+| 
+* commit cd2dc64c5dd002875ad5147c64ee5a8d42b8df97
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 30 10:59:57 2025 -0400
+| 
+|     * se desactiva elastic search
+| 
+* commit a2131c74c88232fd04b61f599308775be610a25a
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 30 10:56:06 2025 -0400
+| 
+|     * changelog
+| 
+* commit 5584836650d4c6085bac9d62f53327070f04212d
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 30 10:55:54 2025 -0400
+| 
+|     * limite de memoria para elastic
+| 
+* commit 234a12345c811bc2ba6371558912b0a98aace3c1
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 30 10:43:09 2025 -0400
+| 
+|     * changelog
+| 
+* commit 5bc2f83d7f6a990afe6daa2ee16998e916bf455b
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 30 10:43:03 2025 -0400
+| 
+|     * bugfix
+| 
+* commit 186ef8efc5abb6e3893deb8591452f8c34530edc
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 30 10:28:32 2025 -0400
+| 
+|     * changelog
+| 
+* commit 4787eb3b2cdd9ddcabf38a4911f9507457677ebd
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 30 10:28:23 2025 -0400
+| 
+|     * dependencias
+| 
+* commit 943f8a32b74fddbda0ba4fbf007811fdb37e2712
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 30 10:06:42 2025 -0400
+| 
+|     * changelog
+| 
+* commit 1b02a498e4557351b91b1b141156662559c472a3
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 30 10:06:33 2025 -0400
+| 
+|     * se agrega script de instalacion
+| 
+* commit 809ed8d22acaf0e6a78cb20d44d1e608d317fa6b
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Thu May 29 19:09:49 2025 -0400
+| 
+|     * changelog
+| 
+* commit 1220eb40ca72044d2eea08ad9cb97ba20935c7fa
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Thu May 29 19:09:42 2025 -0400
+| 
+|     * readme
+| 
+* commit 5e6c7d1c6dc9fb9fd76da5cf0c32379a7d4a2db7
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Tue May 27 14:36:19 2025 -0400
+| 
+|     Update README.md
+| 
+* commit 9b2b9912fc9ea38c9b26dc9fa04155280650a931 (tag: v1.0)
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Tue May 27 13:56:11 2025 -0400
+| 
+|     * variables
+| 
+* commit 79bed6f788730816c0a28e0fbbeac353b0bdc5f8
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Tue May 27 13:51:01 2025 -0400
+| 
+|     Create docker-compose.yaml
+| 
+* commit 76e33230942d90781fbc922e6b40fe35c40f3d05
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Fri May 23 09:50:07 2025 -0400
+| 
+|     Update .gitignore
+| 
+* commit acbafa0ae395cadd556a1e27dacc3b4c65e35e24
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Fri May 23 09:46:42 2025 -0400
+| 
+|     Create COPYING
+| 
+* commit aa2aab74ccc3717610d4da098d49c2719428c568
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Fri May 23 09:45:53 2025 -0400
+| 
+|     Create AUTHORS
+| 
+* commit 55ee3597e22a3d565e682bad46bed47ed0f21366
+| Author: Jesús Palencia <sinfallas@yahoo.com>
+| Date:   Fri May 23 09:45:16 2025 -0400
+| 
+|     Create .gitignore
+| 
+* commit 52d2e1863c7832194569ed149be4d42d0aab052d
+  Author: Jesús Palencia <sinfallas@yahoo.com>
+  Date:   Fri May 23 09:41:00 2025 -0400
+  
+      Initial commit
